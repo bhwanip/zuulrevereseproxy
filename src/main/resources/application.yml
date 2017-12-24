@@ -1,0 +1,17 @@
+zuul:
+  routes:
+    races:
+      path: /races/**
+      serviceId: RACES
+    participant:
+      path: /participant/**
+      serviceId: PARTICIPANT
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8171/eureka/
+    instance:
+      hostname: localhost
+spring:
+  application:
+    name: zuul-service
